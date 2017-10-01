@@ -1,0 +1,26 @@
+version: 0.1.{build}
+image: Visual Studio 2017
+configuration: Release
+platform: Any CPU
+cache: src/packages
+branches:
+  only:
+    - master
+before_build:
+- dotnet restore src/Take.Blip.ContentTypesHelper.sln
+build:
+  parallel: true
+  project: src/Take.Blip.ContentTypesHelper.sln
+  verbosity: normal
+after_build:
+- dotnet pack src/Take.Blip.ContentTypesHelper.csproj --configuration Release /p:Version=%APPVEYOR_BUILD_VERSION%
+test:
+  assemblies:    
+    - '**\*Tests.dll'
+artifacts:
+  - path: '**\Take.Blip*.nupkg'
+deploy:
+- provider: NuGet
+  api_key:
+    secure: 1932a6a2-5f73-4e55-bb3f-05dd12ff7611
+  skip_symbols: false
