@@ -4,4 +4,9 @@
     <TargetFramework>net461</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Lime.Messaging" Version="0.7.197" />
+    <PackageReference Include="Lime.Protocol" Version="0.7.197" />
+  </ItemGroup>
+
 </Project>
