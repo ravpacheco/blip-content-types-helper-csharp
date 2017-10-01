@@ -13,7 +13,7 @@ build:
   project: src/Take.Blip.ContentTypesHelper.sln
   verbosity: normal
 after_build:
-- dotnet pack src/Take.Blip.ContentTypesHelper.csproj --configuration Release /p:Version=%APPVEYOR_BUILD_VERSION%
+- dotnet pack src/ContentTypesHelper/Take.Blip.ContentTypesHelper.csproj --configuration Release /p:Version=%APPVEYOR_BUILD_VERSION%
 test:
   assemblies:    
     - '**\*Tests.dll'
