@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Take.Blip.ContentTypesHelper", "Take.Blip.ContentTypesHelper.csproj", "{1EC00F80-CE92-4F8A-8648-4B8F5BFE7F0F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{B5108FA6-4B7D-4518-8E66-151AD873ABDB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take.Blip.ContentTypesHelper.Tests", "UnitTests\Take.Blip.ContentTypesHelper.Tests\Take.Blip.ContentTypesHelper.Tests.csproj", "{5B5100C1-D58D-4B84-BE5F-31F5DA1CF961}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContentTypesHelper", "ContentTypesHelper", "{319327AF-9886-4BD9-A5C4-0062F982418E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Take.Blip.ContentTypesHelper", "ContentTypesHelper\Take.Blip.ContentTypesHelper.csproj", "{5AC6CA70-5498-4E65-99D5-4C30E136044E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,20 +17,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1EC00F80-CE92-4F8A-8648-4B8F5BFE7F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1EC00F80-CE92-4F8A-8648-4B8F5BFE7F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1EC00F80-CE92-4F8A-8648-4B8F5BFE7F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1EC00F80-CE92-4F8A-8648-4B8F5BFE7F0F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5B5100C1-D58D-4B84-BE5F-31F5DA1CF961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5B5100C1-D58D-4B84-BE5F-31F5DA1CF961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B5100C1-D58D-4B84-BE5F-31F5DA1CF961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B5100C1-D58D-4B84-BE5F-31F5DA1CF961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AC6CA70-5498-4E65-99D5-4C30E136044E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AC6CA70-5498-4E65-99D5-4C30E136044E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AC6CA70-5498-4E65-99D5-4C30E136044E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AC6CA70-5498-4E65-99D5-4C30E136044E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5B5100C1-D58D-4B84-BE5F-31F5DA1CF961} = {B5108FA6-4B7D-4518-8E66-151AD873ABDB}
+		{5AC6CA70-5498-4E65-99D5-4C30E136044E} = {319327AF-9886-4BD9-A5C4-0062F982418E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {673C00DD-C0FF-4085-8E04-E0727DD4FED1}
