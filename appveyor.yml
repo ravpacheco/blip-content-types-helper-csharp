@@ -14,15 +14,13 @@ build:
   verbosity: normal
 after_build:
 - dotnet pack src/ContentTypesHelper/Take.Blip.ContentTypesHelper.csproj --configuration Release /p:Version=%APPVEYOR_BUILD_VERSION%
+# Workaround to get nuget api_key
+- ps: $env:api_key = 0QJ9W4dyDoEgOCawqD6A/28bRIdnbPBaDNpzp6mtMo07Qj/2d/wVLheuYfQzLPw/
 test:
   assemblies:    
     - '**\*Tests.dll'
 artifacts:
   - path: '**\Take.Blip*.nupkg'
-
-after_build:
-  # Workaround to get nuget api_key
-  - ps: $env:api_key = 0QJ9W4dyDoEgOCawqD6A/28bRIdnbPBaDNpzp6mtMo07Qj/2d/wVLheuYfQzLPw/
 deploy:
 - provider: NuGet
   api_key:
