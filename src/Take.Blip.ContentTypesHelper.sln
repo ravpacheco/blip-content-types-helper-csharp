@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{B5108FA6-4B7D-4518-8E66-151AD873ABDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take.Blip.ContentTypesHelper.Tests", "UnitTests\Take.Blip.ContentTypesHelper.Tests\Take.Blip.ContentTypesHelper.Tests.csproj", "{5B5100C1-D58D-4B84-BE5F-31F5DA1CF961}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take.Blip.ContentTypesHelper.Tests", "UnitTests\Take.Blip.ContentTypesHelper.Tests.csproj", "{5B5100C1-D58D-4B84-BE5F-31F5DA1CF961}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContentTypesHelper", "ContentTypesHelper", "{319327AF-9886-4BD9-A5C4-0062F982418E}"
 EndProject
