@@ -3,8 +3,6 @@ using Lime.Protocol;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Take.Blip.ContentTypesHelper.Facebook
 {
@@ -15,6 +13,47 @@ namespace Take.Blip.ContentTypesHelper.Facebook
             return new PlainText
             {
                 Text = text
+            };
+        }
+
+        public static MediaLink CreateVideo(string videoUrl,
+            string type = "video/*",
+            string previewUrl = null,
+            string previewType = "video/*",
+            string title = null,
+            string text = null,
+            string aspectRation = null)
+        {
+            if (videoUrl == null) throw new ArgumentNullException(nameof(videoUrl));
+
+            return CreateVideo(new Uri(Uri.EscapeUriString(videoUrl)),
+                type,
+                previewUrl.IsNullOrEmpty() ? null : new Uri(Uri.EscapeUriString(previewUrl)),
+                previewType,
+                title,
+                text,
+                aspectRation);
+        }
+
+        public static MediaLink CreateVideo(Uri videoUrl,
+            string type = "video/*",
+            Uri previewUrl = null,
+            string previewType = "video/*",
+            string title = null,
+            string text = null,
+            string aspectRation = null)
+        {
+            if (videoUrl == null) throw new ArgumentNullException(nameof(videoUrl));
+
+            return new MediaLink
+            {
+                Title = title,
+                Text = text,
+                AspectRatio = aspectRation,
+                PreviewUri = previewUrl,
+                PreviewType = MediaType.Parse(previewType),
+                Uri = videoUrl,
+                Type = MediaType.Parse(type),
             };
         }
 
@@ -77,6 +116,24 @@ namespace Take.Blip.ContentTypesHelper.Facebook
             string text = null)
         {
             return CreateImage(imageUrl, type, previewUrl, previewType, title, text, "1:1");
+        }
+
+        public static Select CreateQuickReply(string text, IEnumerable<SelectOption> selectOptions)
+        {
+            return new Select
+            {
+                Text = text,
+                Options = selectOptions.ToArray(),
+                Scope = SelectScope.Immediate
+            };
+        }
+
+        public static ChatState CreateTypingState()
+        {
+            return new ChatState
+            {
+                State = ChatStateEvent.Composing
+            };
         }
     }
 }
